@@ -1,0 +1,164 @@
+
+Активные подключения
+
+  Имя    Локальный адрес        Внешний адрес          Состояние
+  TCP    0.0.0.0:135            LAPTOP-J9V5F5VS:0      LISTENING
+  RpcSs
+ [svchost.exe]
+  TCP    0.0.0.0:445            LAPTOP-J9V5F5VS:0      LISTENING
+ Не удается получить сведения о владельце
+  TCP    0.0.0.0:5040           LAPTOP-J9V5F5VS:0      LISTENING
+  CDPSvc
+ [svchost.exe]
+  TCP    0.0.0.0:5357           LAPTOP-J9V5F5VS:0      LISTENING
+ Не удается получить сведения о владельце
+  TCP    0.0.0.0:49664          LAPTOP-J9V5F5VS:0      LISTENING
+ [lsass.exe]
+  TCP    0.0.0.0:49665          LAPTOP-J9V5F5VS:0      LISTENING
+ Не удается получить сведения о владельце
+  TCP    0.0.0.0:49666          LAPTOP-J9V5F5VS:0      LISTENING
+  Schedule
+ [svchost.exe]
+  TCP    0.0.0.0:49667          LAPTOP-J9V5F5VS:0      LISTENING
+  EventLog
+ [svchost.exe]
+  TCP    0.0.0.0:49668          LAPTOP-J9V5F5VS:0      LISTENING
+ [spoolsv.exe]
+  TCP    0.0.0.0:49670          LAPTOP-J9V5F5VS:0      LISTENING
+ Не удается получить сведения о владельце
+  TCP    127.0.0.1:61513        LAPTOP-J9V5F5VS:0      LISTENING
+ [NVIDIA Web Helper.exe]
+  TCP    127.0.0.1:64202        LAPTOP-J9V5F5VS:0      LISTENING
+ [SocketHeciServer.exe]
+  TCP    192.168.43.73:139      LAPTOP-J9V5F5VS:0      LISTENING
+ Не удается получить сведения о владельце
+  TCP    192.168.43.73:61533    20.199.120.85:https    ESTABLISHED
+  WpnService
+ [svchost.exe]
+  TCP    192.168.43.73:61551    52.98.152.194:https    ESTABLISHED
+ [SearchApp.exe]
+  TCP    192.168.43.73:61696    20.82.217.86:https     TIME_WAIT
+  TCP    192.168.43.73:61699    20.54.232.160:https    ESTABLISHED
+  CDPUserSvc_35a9473
+ [svchost.exe]
+  TCP    [::]:135               LAPTOP-J9V5F5VS:0      LISTENING
+  RpcSs
+ [svchost.exe]
+  TCP    [::]:445               LAPTOP-J9V5F5VS:0      LISTENING
+ Не удается получить сведения о владельце
+  TCP    [::]:5357              LAPTOP-J9V5F5VS:0      LISTENING
+ Не удается получить сведения о владельце
+  TCP    [::]:49664             LAPTOP-J9V5F5VS:0      LISTENING
+ [lsass.exe]
+  TCP    [::]:49665             LAPTOP-J9V5F5VS:0      LISTENING
+ Не удается получить сведения о владельце
+  TCP    [::]:49666             LAPTOP-J9V5F5VS:0      LISTENING
+  Schedule
+ [svchost.exe]
+  TCP    [::]:49667             LAPTOP-J9V5F5VS:0      LISTENING
+  EventLog
+ [svchost.exe]
+  TCP    [::]:49668             LAPTOP-J9V5F5VS:0      LISTENING
+ [spoolsv.exe]
+  TCP    [::]:49670             LAPTOP-J9V5F5VS:0      LISTENING
+ Не удается получить сведения о владельце
+  TCP    [::1]:49669            LAPTOP-J9V5F5VS:0      LISTENING
+ [jhi_service.exe]
+  UDP    0.0.0.0:500            *:*                    
+  IKEEXT
+ [svchost.exe]
+  UDP    0.0.0.0:3702           *:*                    
+ [dashost.exe]
+  UDP    0.0.0.0:3702           *:*                    
+ [dashost.exe]
+  UDP    0.0.0.0:3702           *:*                    
+  FDResPub
+ [svchost.exe]
+  UDP    0.0.0.0:3702           *:*                    
+  FDResPub
+ [svchost.exe]
+  UDP    0.0.0.0:4500           *:*                    
+  IKEEXT
+ [svchost.exe]
+  UDP    0.0.0.0:5050           *:*                    
+  CDPSvc
+ [svchost.exe]
+  UDP    0.0.0.0:5353           *:*                    
+  Dnscache
+ [svchost.exe]
+  UDP    0.0.0.0:5355           *:*                    
+  Dnscache
+ [svchost.exe]
+  UDP    0.0.0.0:51156          *:*                    
+  FDResPub
+ [svchost.exe]
+  UDP    0.0.0.0:53114          *:*                    
+ [dashost.exe]
+  UDP    127.0.0.1:1900         *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    127.0.0.1:10050        *:*                    
+ [NVIDIA Web Helper.exe]
+  UDP    127.0.0.1:49664        *:*                    
+  iphlpsvc
+ [svchost.exe]
+  UDP    127.0.0.1:51289        *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    127.0.0.1:59983        *:*                    
+ [nvcontainer.exe]
+  UDP    192.168.43.73:137      *:*                    
+ Не удается получить сведения о владельце
+  UDP    192.168.43.73:138      *:*                    
+ Не удается получить сведения о владельце
+  UDP    192.168.43.73:1900     *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    192.168.43.73:2177     *:*                    
+  QWAVE
+ [svchost.exe]
+  UDP    192.168.43.73:51288    *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    [::]:500               *:*                    
+  IKEEXT
+ [svchost.exe]
+  UDP    [::]:3702              *:*                    
+  FDResPub
+ [svchost.exe]
+  UDP    [::]:3702              *:*                    
+  FDResPub
+ [svchost.exe]
+  UDP    [::]:3702              *:*                    
+ [dashost.exe]
+  UDP    [::]:3702              *:*                    
+ [dashost.exe]
+  UDP    [::]:4500              *:*                    
+  IKEEXT
+ [svchost.exe]
+  UDP    [::]:5353              *:*                    
+  Dnscache
+ [svchost.exe]
+  UDP    [::]:5355              *:*                    
+  Dnscache
+ [svchost.exe]
+  UDP    [::]:51157             *:*                    
+  FDResPub
+ [svchost.exe]
+  UDP    [::]:53115             *:*                    
+ [dashost.exe]
+  UDP    [::1]:1900             *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    [::1]:51287            *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    [fe80::5982:91f6:3377:6328%6]:1900  *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    [fe80::5982:91f6:3377:6328%6]:2177  *:*                    
+  QWAVE
+ [svchost.exe]
+  UDP    [fe80::5982:91f6:3377:6328%6]:51286  *:*                    
+  SSDPSRV
+ [svchost.exe]
