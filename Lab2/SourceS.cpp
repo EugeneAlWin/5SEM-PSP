@@ -35,7 +35,7 @@ int main()
             memset(&clnt, 0, sizeof(clnt)); // обнулить память
             int lclnt = sizeof(clnt);    // размер SOCKADDR_IN
 
-            if ((cS = accept(sS, (sockaddr*)&clnt, &lclnt)) == INVALID_SOCKET) throw  SetErrorMsgText("accept:", WSAGetLastError());
+            if ((cS = accept(sS, (sockaddr*)&clnt, &lclnt)) == INVALID_SOCKET) throw  SetErrorMsgText("accept:", WSAGetLastError()); //	Разрешает попытку входящего подключения на сокете.
 
             char ibuf[50]{},                      //буфер ввода 
                 obuf[50]{};                       //буфер вывода

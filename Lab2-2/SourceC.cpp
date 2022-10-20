@@ -25,7 +25,7 @@ int main()
         serv.sin_port = htons(2000);                   // TCP-порт 2000
         serv.sin_addr.s_addr = inet_addr("127.0.0.1");  // адрес сервера
 
-        if ((connect(cC, (sockaddr*)&serv, sizeof(serv))) == SOCKET_ERROR) throw  SetErrorMsgText("connect:", WSAGetLastError());
+        if ((connect(cC, (sockaddr*)&serv, sizeof(serv))) == SOCKET_ERROR) throw  SetErrorMsgText("connect:", WSAGetLastError()); //Устанавливает подключение к указанному сокету.
 
         char ibuf[50]{},                      //буфер ввода 
             obuf[50]{};                       //буфер вывода
