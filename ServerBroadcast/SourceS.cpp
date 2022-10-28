@@ -15,8 +15,8 @@ int main()
 	WSADATA wsaData;
 	SOCKET sS;
 	SOCKET allS;
-	SOCKADDR_IN serv;
-	SOCKADDR_IN from;
+	SOCKADDR_IN serv{};
+	SOCKADDR_IN from{};
 	
 	char name[50] = "Hello";
 	serv.sin_family = AF_INET;           // используется IP-адресация  
@@ -111,17 +111,18 @@ void SearchServer(char* name)
 	int lfrom = sizeof(from);
 	SOCKET sock;
 	int lbuf;
-	int optval = 3000;
+	int optval = 3000; //Параметры optval и optlen используются в функции setsockopt для доступа к значениям флагов.
 	if ((sock = socket(AF_INET, SOCK_DGRAM, NULL)) == INVALID_SOCKET)
 	{
 		throw SetErrorMsgText("socket: ", WSAGetLastError());
 	}
-	if (setsockopt(sock, SOL_SOCKET, SO_BROADCAST, (char*)&optval, sizeof(optval)) == SOCKET_ERROR)
+	if (setsockopt(sock, SOL_SOCKET, SO_BROADCAST, (char*)&optval, sizeof(optval)) == SOCKET_ERROR) // IPPROTO_TCP/SOL_SOCKET 
 		throw SetErrorMsgText("opt: ", WSAGetLastError());
-	SOCKADDR_IN all;
+	SOCKADDR_IN all{};
 	all.sin_family = AF_INET;
 	all.sin_port = htons(2000);
 	all.sin_addr.s_addr = INADDR_BROADCAST;
+	
 	char ibuf[50];
 	if (lbuf = sendto(sock, name, strlen(name) + 1, NULL, (sockaddr*)&all, sizeof(all)) == SOCKET_ERROR)
 	{

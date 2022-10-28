@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="ClientU.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SEMT.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
