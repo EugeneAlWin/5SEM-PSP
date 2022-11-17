@@ -24,7 +24,7 @@ int main()
 	int lfrom = sizeof(from);
 
 	char hostname[25];
-	hostent* clntInfo;
+	hostent* clntInfo; // информация о клиенте 
 	memset(&clntInfo, 0, sizeof(clntInfo));
 
 	try
