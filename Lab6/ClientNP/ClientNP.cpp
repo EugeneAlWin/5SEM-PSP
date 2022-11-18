@@ -20,11 +20,14 @@ int main()
 	try
 	{
 		if ((hPipe = CreateFile(
-			L"\\\\.\\pipe\\Tube",
-			GENERIC_READ | GENERIC_WRITE,
-			FILE_SHARE_READ | FILE_SHARE_WRITE,
-			NULL, OPEN_EXISTING, NULL,
-			NULL)) == INVALID_HANDLE_VALUE)
+			L"\\\\.\\pipe\\Tube", // имя канала
+			GENERIC_READ | GENERIC_WRITE, // чтение и запись
+			FILE_SHARE_READ | FILE_SHARE_WRITE, // общий доступ
+			NULL, // защита по умолчанию
+			OPEN_EXISTING, // открытие существующего канала
+			NULL,  // атрибуты по умолчанию
+			NULL // дескриптор шаблона файла по умолчанию
+		)) == INVALID_HANDLE_VALUE) 
 			throw SetPipeError("createfile:", GetLastError());
 
 		cout << "Connected!" << endl;

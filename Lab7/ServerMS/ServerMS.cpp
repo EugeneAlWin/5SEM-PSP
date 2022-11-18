@@ -12,11 +12,13 @@ int main()
 	LPCTSTR SlotName = TEXT("\\\\.\\mailslot\\Box");
 	try
 	{
-		if ((hM = CreateMailslot(SlotName,
-			300,
+		if ((hM = CreateMailslot(
+			SlotName, // имя слота
+			300, // максимальный размер сообщения
 			//MAILSLOT_WAIT_FOREVER, // ждать вечно
 			180000, // 180000 milliseconds (180 sec = 3 min)
-			NULL)) == INVALID_HANDLE_VALUE)
+			NULL // атрибуты безопасности
+		)) == INVALID_HANDLE_VALUE)
 			throw SetPipeError("CreateMailslotError:", GetLastError());
 		cout << "Mailslot server launched" << endl;
 		cout << "Waiting for reading 3 minutes.." << endl;

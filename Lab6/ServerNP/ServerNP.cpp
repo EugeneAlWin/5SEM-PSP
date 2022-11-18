@@ -17,8 +17,6 @@ int main()
 
 	HANDLE pipeHandle; // дескриптор канала
 
-	bool multi = true; //////////////////////////////////////
-
 	try
 	{
 		do
@@ -27,7 +25,7 @@ int main()
 				pipeHandle = CreateNamedPipe(
 				L"\\\\.\\pipe\\Tube",
 				PIPE_ACCESS_DUPLEX, //дуплексный канал
-					PIPE_TYPE_MESSAGE | PIPE_WAIT, // сообщения|синхронный
+				PIPE_TYPE_MESSAGE | PIPE_WAIT, // сообщения|синхронный
 				1, // максимум 1 экземпляр канала
 				NULL, // выходной буфер
 				NULL,  // входной буфер
@@ -83,7 +81,7 @@ int main()
 					throw SetPipeError("writefile:", GetLastError());
 				}
 
-			} while (wcscmp(outBuffPtr, checkBuf) && multi);
+			} while (wcscmp(outBuffPtr, checkBuf));
 
 			cout << "Disconnected" << endl;
 

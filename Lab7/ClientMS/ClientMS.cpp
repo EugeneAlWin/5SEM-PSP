@@ -12,12 +12,15 @@ int main()
 	LPCTSTR SlotName = TEXT("\\\\.\\mailslot\\Box");
 	try
 	{
-		if ((hM = CreateFile(SlotName,
+		if ((hM = CreateFile(
+			SlotName, // имя слота
 			GENERIC_WRITE, // будем писать в ящик
 			FILE_SHARE_READ, // разрешаем одновременно читать
-			NULL,
+			NULL, // атрибуты безопасности
 			OPEN_EXISTING, // ящик уже есть
-			NULL, NULL)) == INVALID_HANDLE_VALUE)
+			NULL,	// атрибуты файла
+			NULL // шаблон файла
+		)) == INVALID_HANDLE_VALUE)
 			throw SetPipeError("CreateFileError:", GetLastError());
 		cout << "Mailslot client launched" << endl;
 
