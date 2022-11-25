@@ -18,8 +18,8 @@ int main()
 			FILE_SHARE_READ, // разрешаем одновременно читать
 			NULL, // атрибуты безопасности
 			OPEN_EXISTING, // ящик уже есть
-			NULL,	// атрибуты файла
-			NULL // шаблон файла
+			NULL,	// атрибуты файла 
+			NULL // шаблон файла 
 		)) == INVALID_HANDLE_VALUE)
 			throw SetPipeError("CreateFileError:", GetLastError());
 		cout << "Mailslot client launched" << endl;
@@ -28,11 +28,13 @@ int main()
 		start = clock();
 
 		for (int i = 0; i < 1000; i++)
-			if (!WriteFile(hM,
+			if (!WriteFile(
+				hM, // дескриптор слота
 				wbuf, // буфер
 				sizeof(wbuf), // размер буфера
 				&wb, // записано
-				NULL))
+				NULL // атрибуты асинхронной записи
+			)) 
 				throw SetPipeError("WriteFileError:", GetLastError());
 
 

@@ -8,7 +8,7 @@ int main()
 {
 	HANDLE hM; // дескриптор почтового ящика
 	DWORD rb; // длина почитанного сообщения
-	char rbuf[100]; // буфер ввода
+	char rbuf[100]{}; // буфер ввода
 	LPCTSTR SlotName = TEXT("\\\\.\\mailslot\\Box");
 	try
 	{
@@ -24,11 +24,13 @@ int main()
 		cout << "Waiting for reading 3 minutes.." << endl;
 		while (true)
 		{
-			if (!ReadFile(hM,
+			if (!ReadFile(
+				hM, // дескриптор слота
 				rbuf, // буфер
 				sizeof(rbuf), // размер буфера
 				&rb, // прочитано
-				NULL))
+				NULL // атрибуты асинхронной записи
+			))
 				throw SetPipeError("ReadFileError:", GetLastError());
 			cout << rbuf << endl;
 		}

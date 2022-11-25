@@ -66,7 +66,6 @@ bool GetServer(char* name, short port, sockaddr* from, int* flen)
 		else
 			throw SetErrorMsgText("recvfrom: ", WSAGetLastError());
 	}
-	//name[strlen(name)] = '0';
 	if (strcmp(ibuf, name) == 0)
 		return true;
 	else
